@@ -1,6 +1,6 @@
 # REACH + OCTO
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.REACH.svg)](https://doi.org/10.5281/zenodo.REACH)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20680385.svg)](https://doi.org/10.5281/zenodo.20680385)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **REACH** — a local workflow practice where Claude authors single-file C# scripts on demand, reaching into live systems (Outlook, SQL Server, git, browsers, desktop apps) to find, analyze, draft, and act.
@@ -184,7 +184,7 @@ Mere    →  contains         the file is the app
   title     = {REACH: Runtime Executable Adaptive C\# Handler — A Local Workflow Practice},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.REACH},
+  doi       = {10.5281/zenodo.20680385},
   url       = {https://reach.semanticintent.dev}
 }
 ```

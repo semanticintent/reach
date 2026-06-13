@@ -27,3 +27,11 @@ keywords:
   - csharp
   - claude
   - semantic-intent
+references:
+  - type: software
+    title: "Intent-as-Infrastructure: When the Compiler Is Claude"
+    authors:
+      - family-names: Shatny
+        given-names: Michael
+    doi: "10.5281/zenodo.20681523"
+    url: "https://github.com/semanticintent/intent-as-infrastructure"

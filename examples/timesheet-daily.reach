@@ -1,0 +1,23 @@
+# timesheet-daily.reach
+# Reconstruct today's work from git, calendar, and inbox.
+# Draft timesheet entries for review before posting.
+# Run at end of day — wake at 5pm via Task Scheduler, review in the morning.
+
+name        daily-timesheet-draft
+description Reconstruct today's work from git and calendar, draft timesheet entries
+
+reach git.commits + outlook.calendar + outlook.inbox
+  since     today
+  analyze   summary
+  then timesystem.timesheet
+    draft from analyze.summary
+    map   commits to request-ids via project-plan
+  then prompt.form
+    title  "Review today's timesheet"
+    fields
+      entry-1-request   text     "Morning request ID"
+      entry-1-desc      textarea "Morning description"
+      entry-2-request   text     "Afternoon request ID"
+      entry-2-desc      textarea "Afternoon description"
+    on submit timesystem.post
+    on cancel outlook.save-draft

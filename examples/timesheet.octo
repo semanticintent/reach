@@ -1,0 +1,24 @@
+# timesheet.octo
+# Daily timesheet draft as an OCTO session.
+# Three arms reconstruct the day, surface shows drafted entries for review.
+
+name    daily-timesheet
+
+arms
+  - git.commits       since today    analyze summary map-to-requests
+  - outlook.calendar  since today    analyze meetings
+  - outlook.inbox     since today    analyze threads
+
+surface
+  type    review
+  title   "Today's timesheet — review before posting"
+  show    drafted-entries
+  actions
+    post      →  reach timesystem.timesheet post entries
+    edit      →  return to entries
+    save      →  reach file.write timesheet-{date}-draft.json
+
+close
+  tone    warm
+  joke    false
+  summary true

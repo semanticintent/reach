@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use REACH or OCTO in your work, please cite as below."
+type: software
+title: "REACH + OCTO: A Local Workflow Practice and Orchestration Pattern"
+abstract: >
+  REACH is a local workflow practice where Claude authors single-file C# scripts
+  on demand, reaching into live systems via a declarative intent DSL. OCTO is an
+  orchestration layer built on REACH — multiple arms reach simultaneously, findings
+  combine into a contextual decision surface, and human judgment is a first-class
+  architectural primitive.
+authors:
+  - family-names: "Shatny"
+    given-names: "Michael"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    website: "https://semanticintent.dev"
+version: "0.1.0"
+date-released: "2026-06-13"
+license: MIT
+repository-code: "https://github.com/semanticintent/reach"
+url: "https://reach.semanticintent.dev"
+keywords:
+  - workflow-automation
+  - local-automation
+  - agentic-computing
+  - human-in-the-loop
+  - declarative-dsl
+  - csharp
+  - claude
+  - semantic-intent

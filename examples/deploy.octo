@@ -1,0 +1,23 @@
+# deploy.octo
+# Deployment verification — four arms, brief surface, neutral close.
+# Run after every deployment to confirm state before notifying the team.
+
+name    deploy-verify
+
+arms
+  - browser.page    "https://staging.internal/health"  extract status
+  - db.query        env staging  sql "SELECT COUNT(*) FROM DeployLog WHERE Date = TODAY()"
+  - git.commits     since yesterday  analyze summary
+  - teams.transcript latest  summarize deployment-mentions
+
+surface
+  type    brief
+  title   "Deployment status — {date}"
+  actions
+    all-clear     →  reach outlook.draft to team subject "Deploy verified ✓"
+    flag-issue    →  reach outlook.draft to lead subject "Deploy issue flagged"
+    investigate   →  expand full findings
+
+close
+  tone    neutral
+  joke    false

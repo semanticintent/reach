@@ -1,0 +1,24 @@
+# sprint-review.octo
+# Sprint cadence review as a full OCTO session.
+# Three arms, review surface, warm close with summary.
+
+name    sprint-cadence-review
+
+arms
+  - outlook.inbox     since 10-weeks-ago  analyze cadence
+  - outlook.calendar  since 10-weeks-ago  analyze density
+  - git.commits       since 10-weeks-ago  analyze after-hours benchmark 15%
+
+surface
+  type    review
+  title   "Sprint health — 10 week read"
+  show    rpm-verdict after-hours-benchmark cadence-by-month
+  actions
+    share-findings  →  reach outlook.draft to manager summarize
+    save-report     →  reach file.write sprint-review-{date}.reach-artifact
+    plan-recovery   →  prompt.input "When does your valley week start?"
+
+close
+  tone    warm
+  joke    true
+  summary true

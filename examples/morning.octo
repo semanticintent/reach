@@ -1,0 +1,24 @@
+# morning.octo
+# The canonical OCTO demonstration.
+# Runs at 8:45am via Task Scheduler. Five arms. One surface. One decision. One close.
+
+name    morning-brief
+
+arms
+  - outlook.inbox     since yesterday     analyze urgent
+  - teams.planner     status overdue
+  - teams.transcript  latest              summarize
+  - git.commits       since yesterday     analyze cadence
+
+surface
+  title   "Good morning. Here's what needs you."
+  show    urgent-items
+  actions
+    draft-reply   →  reach outlook.draft from selected
+    send-summary  →  reach outlook.draft to team summarize all
+    snooze        →  reach teams.planner snooze selected
+    show-all      →  expand full output
+
+close
+  tone  warm
+  joke  true

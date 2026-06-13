@@ -1,0 +1,13 @@
+# sprint-review.reach
+# Sprint cadence review — reads email, calendar, and commits across the sprint period.
+# Calls RPM state (green / yellow / red / all-red) and recommends recovery if needed.
+# Run at end of sprint or any time you want an honest read of work rhythm.
+
+name        sprint-cadence-review
+description Read sprint health across email, calendar, and commits
+
+reach outlook.inbox + outlook.calendar + git.commits
+  since     10-weeks-ago
+  analyze   rpm
+  benchmark after-hours 15%
+  output    report

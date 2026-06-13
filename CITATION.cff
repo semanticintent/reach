@@ -11,7 +11,6 @@ abstract: >
 authors:
   - family-names: "Shatny"
     given-names: "Michael"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
     website: "https://semanticintent.dev"
 version: "0.1.0"
 date-released: "2026-06-13"

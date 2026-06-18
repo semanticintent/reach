@@ -161,9 +161,12 @@ CAL     →  decides          cascade analysis, scoring
 EMBER   →  remembers        typed SIL artifacts, agent handoffs
 REACH   →  reaches          single arm, one source, live systems
 OCTO    →  orchestrates     multiple arms, decision surface, human at the center
+TRACE   →  records          append-only execution memory, every arm and chain
 RECALL  →  publishes        structured documents, sovereign HTML
 Mere    →  contains         the file is the app
 ```
+
+TRACE is the memory layer for REACH + OCTO — every arm, every chain, every human decision, recorded immutably as it happens. See [semanticintent/trace](https://github.com/semanticintent/trace) (DOI: [10.5281/zenodo.20739404](https://doi.org/10.5281/zenodo.20739404)).
 
 ---
 
